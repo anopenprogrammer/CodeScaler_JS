@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #outer_div{
+      background-color: cadetblue;
+      height: 300px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #inner_div{
+      background-color: aliceblue;
+      height: 150px;
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="outer_div">
+    <div id="inner_div">
+      <button id="target">Click here</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById("outer_div").addEventListener("click",()=>{
+      console.log('You are bubbled at Outer div');
+    })
+    document.getElementById("inner_div").addEventListener("click",()=>{
+      console.log('You are on Inner div');
+    })
+    document.getElementById("target").addEventListener("click",()=>{
+      console.log('You are on target');
+    });
+    document.getElementById("outer_div").addEventListener("click",()=>{
+      console.log('You are captured at outer div');
+    }, true)
+  </script>
+</body>
+</html>

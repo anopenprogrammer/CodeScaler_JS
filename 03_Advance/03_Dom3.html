@@ -1,0 +1,73 @@
+<!-- Manipulating DOM Elements -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Welcome to My Page</h1>
+    <p class="content">This is a paragraph.</p>
+    <p class="content">This is another paragraph.</p>
+    <img id="image" src="example.jpg" alt="Example Image">
+    <button id="changeButton">Change Content</button>
+</body>
+</html>
+
+<!-- 
+
+1. Changing Inner HTML and Text Content:
+
+innerHTML: Allows you to get or set the HTML content of an element.
+Example:
+var element = document.getElementById('header');
+element.innerHTML = 'New Header Content';
+Explanation: Setting innerHTML can include HTML tags and will replace the entire content of the element.
+
+textContent: Allows you to get or set the text content of an element.
+Example:
+var element = document.getElementById('header');
+element.textContent = 'New Header Text';
+Explanation: Setting textContent only affects the text and does not parse HTML tags. 
+
+2. Modifying Element Attributes:
+
+setAttribute(): Adds or changes an attribute of an element.
+Example:
+var element = document.querySelector('img');
+element.setAttribute('src', 'newImage.jpg');
+Explanation: This method sets the value of an attribute on the specified element.
+
+getAttribute(): Retrieves the value of a specified attribute.
+Example:
+var src = element.getAttribute('src');
+console.log(src);
+
+removeAttribute(): Removes an attribute from an element.
+Example:
+element.removeAttribute('alt');
+
+3. Adding and Removing Classes:
+
+classList.add(): Adds one or more class names to an element.
+Example:
+var element = document.getElementById('header');
+element.classList.add('new-class');
+Explanation: Adds the specified class to the element if it is not already present.
+
+classList.remove(): Removes one or more class names from an element.
+Example:
+element.classList.remove('old-class');
+Explanation: Removes the specified class from the element if it is present.
+
+classList.toggle(): Toggles a class name on an element.
+Example:
+element.classList.toggle('active');
+Explanation: Adds the class if it is not present, removes it if it is.
+
+-->

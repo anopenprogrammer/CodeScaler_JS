@@ -1,0 +1,37 @@
+<!-- Accessing DOM Elements -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Access Example</title>
+  </head>
+  <body>
+    <h1 id="header">Welcome to My Page</h1>
+    <p class="content">This is a paragraph.</p>
+    <p class="content">This is another paragraph.</p>
+    <div class="container">
+      <p>Nested paragraph.</p>
+    </div>
+    <script>
+      // Using getElementById
+      var header = document.getElementById("header");
+      console.log(header);
+
+      // Using getElementsByClassName
+      var contentParagraphs = document.getElementsByClassName("content");
+      console.log(contentParagraphs);
+
+      // Using getElementsByTagName
+      var paragraphs = document.getElementsByTagName("p");
+      console.log(paragraphs);
+
+      // Using querySelector
+      var firstContentParagraph = document.querySelector(".content");
+      console.log(firstContentParagraph);
+
+      // Using querySelectorAll
+      var allContentParagraphs = document.querySelectorAll(".content");
+      console.log(allContentParagraphs);
+    </script>
+  </body>
+</html>
